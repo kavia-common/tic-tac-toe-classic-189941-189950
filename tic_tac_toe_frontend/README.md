@@ -1,16 +1,28 @@
-# tic_tac_toe_frontend
+# Tic Tac Toe Frontend (Flutter)
 
-A new Flutter project.
+A simple Tic Tac Toe game with two modes:
+- Player vs Computer (basic AI: win, block, center, corners, edges)
+- Player vs Player (local pass-and-play)
 
-## Getting Started
+Design theme: Ocean Professional (modern, clean, rounded corners, subtle shadows).
 
-This project is a starting point for a Flutter application.
+## Run
 
-A few resources to get you started if this is your first Flutter project:
+- Mobile: `flutter run` (Android/iOS)
+- Web (if enabled): `flutter run -d chrome`
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+No environment variables needed. The app is self-contained.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Structure
+
+- lib/main.dart — App bootstrap with Provider and theme
+- lib/theme/app_theme.dart — Ocean Professional theme
+- lib/models/game_model.dart — Game state, rules, and AI
+- lib/screens/home_screen.dart — Mode selection screen
+- lib/screens/game_screen.dart — Game UI (grid, scores, controls)
+
+## Notes
+
+- Uses ChangeNotifier for simple state management.
+- Smooth transitions between screens and subtle gradients consistent with style guide.
+- Highlights winning line cells.
